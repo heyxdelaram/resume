@@ -20,7 +20,7 @@ const Projects = () => {
         <div>
           <p>
             <span className="text-3xl">&#8640; </span>
-            <a href="https://github.com/heyxdelaram/resume.git">
+            <a href="https://github.com/heyxdelaram/resume.git" target="blank">
               This Website 👇
             </a>
           </p>

@@ -6,7 +6,7 @@ const Languages = () => {
       <div className="mt-5 mb-2 text-base font-medium">
         English &#127482;&#127480;
       </div>
-      <div className="w-4/5 rounded-full h-2.5 mb-4 bg-slate-700">
+      <div className="w-4/5 rounded-full h-2.5 mb-4 bg-stone-600">
         <div
           className="bg-blue-600 h-2.5 rounded-full"
           style={{ width: "90%" }}
@@ -16,7 +16,7 @@ const Languages = () => {
         French &#127467;&#127479;
       </div>
       <div
-        className="w-4/5 bg-slate-700
+        className="w-4/5 bg-stone-600
        rounded-full h-2.5 mb-4"
       >
         <div
