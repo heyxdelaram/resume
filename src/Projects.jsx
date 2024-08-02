@@ -10,6 +10,9 @@ const Projects = () => {
   return (
     <div className="my-10">
       <h5 className="text-2xl font-semibold">💻 Projects</h5>
+      <p className="read-the-docs text-sm">
+        Project titles are linked to source/website
+      </p>
 
       <p className="text-center my-5">--- Code ---</p>
       <div>
@@ -17,7 +20,9 @@ const Projects = () => {
         <div>
           <p>
             <span className="text-3xl">&#8640; </span>
-            <a href="/">This Website 👇</a>
+            <a href="https://github.com/heyxdelaram/resume.git">
+              This Website 👇
+            </a>
           </p>
           <div className="flex flex-wrap">
             <Tag str="🟡 Javascript" />

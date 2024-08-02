@@ -1,9 +1,9 @@
 const Skills = () => {
   return (
     <div className="my-10">
-      <h5 className="text-2xl font-semibold">🤹‍♀️ Skills</h5>
+      <h5 className="text-2xl font-semibold align-middle">🤹‍♀️ Skills</h5>
 
-      <table className="mt-5">
+      <table className=" mt-5">
         <colgroup>
           <col />
         </colgroup>
