@@ -33,7 +33,7 @@ function App() {
         <a
           target="blank"
           className="px-5"
-          href="www.linkedin.com/in/delaram-janfarsa"
+          href="https://linkedin.com/in/delaram-janfarsa"
         >
           <img src="/linkedin.svg" className="w-10" />
         </a>
