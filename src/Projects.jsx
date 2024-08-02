@@ -7,6 +7,18 @@ const Projects = () => {
 
       <p className="text-center my-5">--- Code ---</p>
       <div>
+        {/* Resume */}
+        <div>
+          <p>
+            <span className="text-3xl">&#8640; </span>
+            <a href="/">This Website 👇</a>
+          </p>
+          <div className="flex flex-wrap">
+            <Tag str="🟡 Javascript" />
+            <Tag str="🔵 ReactJS" />
+            <Tag str="🟣 Vite" />
+          </div>
+        </div>
         {/* Face Recognition App */}
         <div>
           <p>
