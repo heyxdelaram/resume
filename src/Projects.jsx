@@ -5,6 +5,7 @@ import { useState } from "react";
 const Projects = () => {
   const [openModal, setOpenModal] = useState(false);
   const [openModal2, setOpenModal2] = useState(false);
+  const [openModal3, setOpenModal3] = useState(false);
 
   return (
     <div className="my-10">
@@ -23,57 +24,6 @@ const Projects = () => {
             <Tag str="🔵 ReactJS" />
             <Tag str="🟣 Vite" />
           </div>
-        </div>
-        {/* Face Recognition App */}
-        <div>
-          <p>
-            <span className="text-3xl">&#8640; </span>
-            <a
-              href="https://github.com/heyxdelaram/face-recognition-app"
-              target="blank"
-            >
-              Face Recognition App
-            </a>
-          </p>
-          <div className="flex flex-wrap">
-            <Tag str="🟡 Javascript" />
-            <Tag str="🔵 ReactJS" />
-            <Tag str="🟢 NodeJS" />
-            <Tag str="🟢 ExpressJS" />
-            <Tag str="🐘 PostgreSQL" />
-          </div>
-          <p className="read-the-docs mt-2">
-            This application uses Clarifai API ( a machine learning API ) that
-            has a login and signup page, database , etc. After logging in, the
-            user can enter a image URL in order for the API to detect a face in
-            the provided image. This project covered a wide range of full-stack
-            technology
-          </p>
-        </div>
-
-        {/* Bank App */}
-        <div>
-          <p>
-            <span className="text-3xl">&#8640; </span>
-            <a
-              href="https://github.com/heyxdelaram/bank-standalone-app.git"
-              target="blank"
-            >
-              Bank Desktop App
-            </a>
-          </p>
-          <div className="flex flex-wrap">
-            <Tag str="☕ Java" />
-            <Tag str="🟠 SQL" />
-            <Tag str="🏌️‍♂️ Swing" />
-          </div>
-          <p className="read-the-docs mt-2">
-            This was a university final assignment and a team project.
-            <br /> The objective was to create a real and functional bank
-            application that had panels for customers, employees and the central
-            bank (for tracking transactions). It helped me develop a decent
-            knowledge in Java, Mysql and Database Design.
-          </p>
         </div>
 
         {/* AI Summarizer */}
@@ -148,6 +98,82 @@ const Projects = () => {
             nice-looking UI which will allow users to easily access the service.
           </p>
         </div>
+        {/* Wordle */}
+        <Modal show={openModal3} onClose={() => setOpenModal3(false)}>
+          <Modal.Header>AI Summarization with OpenAI</Modal.Header>
+          <Modal.Body>
+            <div className="space-y-6">
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                Wordle is a free online game where players guess a five-letter
+                word in six tries. After each guess, letters are colored green,
+                yellow, or gray to indicate whether they are in the correct
+                position, present but misplaced, or absent in the target word.
+              </p>
+              <img src="/wordle.gif" />
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                How to Play
+                <br />
+                1. Enter a five-letter word: Type in any five-letter word (via
+                the on-screen keyboard or your device's keyboard ⌨️) and press
+                Enter.
+                <br />
+                ⚠️ Note that the guessed word must be an actual word otherwise
+                you will receive an alert message.
+                <br />
+                2. Check the tile colors: The color of each letter's box will
+                change after you make a guess:
+                <br />
+                ✅Green: This letter is in the correct position.
+                <br />
+                🟨Yellow: This letter is in the word, but in the wrong position.
+                <br />
+                🥈Gray: This letter is not in the word at all. The on-screen
+                keyboard will also color wrong the letters.
+                <br />
+                3. Repeat steps 2 and 3: Make another guess based on the color
+                clues from your previous guess. You have 6 total guesses to
+                guess the correct word. If you don't guess the word correctly
+                after the six attempts, you lose the game.☹️
+              </p>
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <a
+              href="https://wordle-clone-heyxdelaram.netlify.app/"
+              className="font-bold hover:bg-gray-200 rounded-full px-4 py-2"
+              target="blank"
+            >
+              Website
+            </a>
+            <a
+              href="https://github.com/heyxdelaram/wordle.git"
+              className="font-bold hover:bg-gray-200 rounded-full px-4 py-2"
+              target="blank"
+            >
+              Source
+            </a>
+          </Modal.Footer>
+        </Modal>
+        <div>
+          <p>
+            <span className="text-3xl">&#8640; </span>
+            <a
+              className="bg-transparent hover:bg-zinc-700"
+              onClick={() => setOpenModal3(true)}
+              target="blank"
+            >
+              Wordle Clone
+            </a>
+          </p>
+          <div className="flex flex-wrap">
+            <Tag str="🟡 Javascript" />
+            <Tag str="🔵 ReactJS" />
+          </div>
+          <p className="read-the-docs mt-2">
+            A clone of the Worlde game which has an implentation of most
+            features and rules that are applied.
+          </p>
+        </div>
         {/* Live Chat */}
         <div>
           <Modal show={openModal} onClose={() => setOpenModal(false)}>
@@ -207,21 +233,56 @@ const Projects = () => {
             users in one Chatroom.
           </p>
         </div>
-        {/* Wordle */}
+
+        {/* Face Recognition App */}
         <div>
           <p>
             <span className="text-3xl">&#8640; </span>
-            <a href="https://github.com/heyxdelaram/wordle.git" target="blank">
-              Wordle Clone
+            <a
+              href="https://github.com/heyxdelaram/face-recognition-app"
+              target="blank"
+            >
+              Face Recognition App
             </a>
           </p>
           <div className="flex flex-wrap">
             <Tag str="🟡 Javascript" />
             <Tag str="🔵 ReactJS" />
+            <Tag str="🟢 NodeJS" />
+            <Tag str="🟢 ExpressJS" />
+            <Tag str="🐘 PostgreSQL" />
           </div>
           <p className="read-the-docs mt-2">
-            A clone of the Worlde game which has an implentation of most
-            features and rules that are applied.
+            This application uses Clarifai API ( a machine learning API ) that
+            has a login and signup page, database , etc. After logging in, the
+            user can enter a image URL in order for the API to detect a face in
+            the provided image. This project covered a wide range of full-stack
+            technology
+          </p>
+        </div>
+
+        {/* Bank App */}
+        <div>
+          <p>
+            <span className="text-3xl">&#8640; </span>
+            <a
+              href="https://github.com/heyxdelaram/bank-standalone-app.git"
+              target="blank"
+            >
+              Bank Desktop App
+            </a>
+          </p>
+          <div className="flex flex-wrap">
+            <Tag str="☕ Java" />
+            <Tag str="🟠 SQL" />
+            <Tag str="🏌️‍♂️ Swing" />
+          </div>
+          <p className="read-the-docs mt-2">
+            This was a university final assignment and a team project.
+            <br /> The objective was to create a real and functional bank
+            application that had panels for customers, employees and the central
+            bank (for tracking transactions). It helped me develop a decent
+            knowledge in Java, Mysql and Database Design.
           </p>
         </div>
         {/* UI Design */}
