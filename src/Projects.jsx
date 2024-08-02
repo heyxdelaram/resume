@@ -1,6 +1,11 @@
 import Tag from "./components/Tag";
+import { Button, Modal } from "flowbite-react";
+import { useState } from "react";
 
 const Projects = () => {
+  const [openModal, setOpenModal] = useState(false);
+  const [openModal2, setOpenModal2] = useState(false);
+
   return (
     <div className="my-10">
       <h5 className="text-2xl font-semibold">💻 Projects</h5>
@@ -71,15 +76,66 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Robot Search */}
+        {/* AI Summarizer */}
+        <Modal show={openModal2} onClose={() => setOpenModal2(false)}>
+          <Modal.Header>AI Summarization with OpenAI</Modal.Header>
+          <Modal.Body>
+            <div className="space-y-6">
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                As Artificial Intelligence (AI) technology continues to advance,
+                it is becoming an integral part of various digital products and
+                services. From virtual assistants to recommendation engines,
+                AI-powered tools have the potential to assist humans by
+                automating and reducing the amount of time needed to accomplish
+                certain tasks.
+                <br />
+                One example is to summarize lengthy texts in order to have a
+                clear understanding of the overall content in a short amount of
+                tiime. This can be done via one of OpenAI API's which I have
+                applied to this project.
+              </p>
+              <video class="w-full max-h-80" autoPlay>
+                <source src="/ai-sum.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                Just One Paste Away
+                <br />
+                Users can utilize this service by providing a link to the
+                considered content. The summarization will be taken care of and
+                displayed once generated. Also the link will be saved in the
+                local storage so the summary can be accessed easily anytime
+                after closing the website by just clicking on it. I've also
+                enabled links to be copied to the clipboard if necessary.
+              </p>
+            </div>
+          </Modal.Body>
+          <Modal.Footer>
+            <a
+              href="https://summarizer-openai.netlify.app/"
+              className="font-bold hover:bg-gray-200 rounded-full px-4 py-2"
+              target="blank"
+            >
+              Website
+            </a>
+            <a
+              href="https://github.com/heyxdelaram/ai-summarizer"
+              className="font-bold hover:bg-gray-200 rounded-full px-4 py-2"
+              target="blank"
+            >
+              Source
+            </a>
+          </Modal.Footer>
+        </Modal>
         <div>
           <p>
             <span className="text-3xl">&#8640; </span>
             <a
-              href="https://heyxdelaram.github.io/robot-search-app/"
+              className="bg-transparent hover:bg-zinc-700"
+              onClick={() => setOpenModal2(true)}
               target="blank"
             >
-              Robot Search Filter
+              AI Summarization with OpenAI
             </a>
           </p>
           <div className="flex flex-wrap">
@@ -87,17 +143,53 @@ const Projects = () => {
             <Tag str="🔵 ReactJS" />
           </div>
           <p className="read-the-docs mt-2">
-            By building this small application I was able to understand the core
-            concepts of Rest APIs, AJAX, the React framework, npm and JSON. A
-            simple yet effective project
+            Sumz website is a service provider which allows users to use the
+            openAI article summarizer api through a fully fledged website with a
+            nice-looking UI which will allow users to easily access the service.
           </p>
         </div>
         {/* Live Chat */}
         <div>
+          <Modal show={openModal} onClose={() => setOpenModal(false)}>
+            <Modal.Header>Live Chat</Modal.Header>
+            <Modal.Body>
+              <div className="space-y-6">
+                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  This project was inspired by Youtube's live chat feature. The
+                  idea is to build a platform for any user to chat with all
+                  other users in one Chatroom.
+                </p>
+                <video class="w-full max-h-80" autoPlay>
+                  <source src="/live-chat.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+                <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  All You Need Is A Google Account
+                  <br />
+                  Firstly, users must "Sign in" via their google account. Once
+                  signed in, the Chatroom will be displayed and users can start
+                  chatting. Once the discussion is over, users can "Log out"
+                  however all previous messages will be displayed once they sign
+                  back in.
+                </p>
+              </div>
+            </Modal.Body>
+            <Modal.Footer>
+              <a
+                href="https://github.com/heyxdelaram/superchat-app.git"
+                className="font-bold hover:bg-gray-200 rounded-full px-4 py-2"
+                target="blank"
+              >
+                Source
+              </a>
+            </Modal.Footer>
+          </Modal>
           <p>
             <span className="text-3xl">&#8640; </span>
             <a
-              href="https://heyxdelaram.framer.website/projects/live-chat-app"
+              className="bg-transparent hover:bg-zinc-700"
+              onClick={() => setOpenModal(true)}
+              // href="https://heyxdelaram.framer.website/projects/live-chat-app"
               target="blank"
             >
               Live Chat
