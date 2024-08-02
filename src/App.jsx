@@ -9,12 +9,13 @@ function App() {
   return (
     <>
       <NameHeader />
-      <hr className="mt-10" />
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <Education />
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
       <Projects />
-      <Skills />
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" /> <Skills />
+      <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />{" "}
       <Languages />
-
       <p className="text-center mt-24 mb-1 read-the-docs font-black">
         © 2024 Delaram Janfarsa
       </p>
